@@ -1,0 +1,21 @@
+myVariable = 0
+
+def when_started1():
+    global myVariable
+    drivetrain.set_drive_velocity(85, PERCENT)
+    drivetrain.drive_for(FORWARD, 24, INCHES, wait=True)
+    drivetrain.turn_for(RIGHT, 90, DEGREES, wait=True)
+    drivetrain.drive_for(FORWARD, 24, INCHES, wait=True)
+    wait(1, SECONDS)
+    motor_8.spin_for(FORWARD, 300, DEGREES, wait=True)
+    motor_3.spin(REVERSE)
+    wait(1, SECONDS)
+    motor_3.spin(FORWARD)
+    wait(1, SECONDS)
+    motor_3.stop()
+    drivetrain.drive_for(REVERSE, 24, INCHES, wait=True)
+    drivetrain.turn_for(LEFT, 90, DEGREES, wait=True)
+    drivetrain.drive_for(REVERSE, 24, INCHES, wait=True)
+    motor_8.spin_for(REVERSE, 180, DEGREES, wait=True)
+
+when_started1()
